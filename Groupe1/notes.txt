@@ -1,0 +1,2 @@
+docker build . --tag="myImage[:myTag]"
+docker run -it <image> /bin/bash -p porthost:portcontainer
