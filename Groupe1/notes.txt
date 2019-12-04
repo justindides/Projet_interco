@@ -1,2 +1,2 @@
-docker build . --tag="myImage[:myTag]"
+docker build . -t docker_interco
 docker run -it <image> /bin/bash -p porthost:portcontainer
