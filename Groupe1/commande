@@ -1,0 +1,10 @@
+docker network create --d bridge BE
+ docker network create \
+  --driver=bridge \
+  --ip-range=120.0.16.0/20 \
+  --subnet=120.0.16.0/20 \
+  --gateway=120.0.16.1 \
+  BEG
+
+docker run -it --name R1 --network BE --ip 120.0.16.1 -p 8080:80 image_routeur
+

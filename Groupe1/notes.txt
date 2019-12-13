@@ -1,2 +1,32 @@
-docker build . -t docker_interco
-docker run -it <image> /bin/bash -p porthost:portcontainer
+# Création des images docker à déployer en focntion des dockerfiles
+docker build . -t image_vierge
+docker build ../DockerFiles/apache_n7 -t image_web
+docker build ../DockerFiles/DHCP_n7 -t image_dhcp
+docker build ../DockerFiles/DNS_n7 -t image_dns
+docker build ../DockerFiles/FTP_n7 -t image_ftp
+docker build ../DockerFiles/quagga_n7 -t image_routeur
+
+# Mise en place d'un réseau de conteneur de type bridge nommé BE
+# Ce réseau sera l'interconnexion entre les routeurs à l'intérieur du réseau d'entreprise
+docker network create \
+  --driver=bridge \
+  --ip-range=120.0.16.0/20 \
+  --subnet=120.0.16.0/20 \
+  BE
+#  --gateway=120.0.16.1 \
+
+# Lancement des routeurs en utilisant l'iamge d'un routeur et en les connectants au précédent réseau. -p portdocker:port hote pour mapper des port
+docker run -it --name R1 --network BE --ip 120.0.16.1 image_routeur
+docker run -it --name R2 --network BE --ip 120.0.16.2 image_routeur
+docker run -it --name R3 --network BE --ip 120.0.16.3 image_routeur
+
+# Réseau du site extérieur
+docker network create \
+  --driver=bridge \
+  --ip-range=120.0.26.0/23 \
+  --subnet=120.0.26.0/23 \
+  BE_exte
+#  --gateway=120.0.26.1 \
+
+# On connecte le routeur du site exte à ce réseau (normalement ça devrait aussi créer son interface physique.
+docker network connect --ip 120.0.26.1 BE_exte R2
