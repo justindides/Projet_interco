@@ -9,5 +9,5 @@ RUN apt-get update && apt-get install -y \
     quagga \
     isc-dhcp-server
 
-# EXPOSE  8000
-# CMD ["python3", "-m", "http.server"]
+EXPOSE  8000
+CMD ["python3", "-m", "http.server"]
