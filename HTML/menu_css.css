@@ -1,0 +1,19 @@
+body {
+		font-family : Arial;
+}
+div {
+		width : 228px;
+		height : 160px;
+		background-image : url("background.jpg");*/
+		border-radius : 10px 10px 10px 10px; /* ne fonctionne pas toujours sur IE */
+		box-shadow : 5px 5px 5px orange,-5px -5px 5px red; /* ne fonctionne pas toujours sur IE */
+}
+h1 {
+		font-size : 150%;
+		color : red;
+		text-align : center;
+		text-shadow : 1px 1px 1px orange, -1px -1px 1px black; /* ne fonctionne pas toujours sur IE */
+}
+ul {
+		color : cyan;
+}

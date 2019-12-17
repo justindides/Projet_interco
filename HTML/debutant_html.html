@@ -1,0 +1,121 @@
+<link rel="stylesheet" type="text/css" href="debutant_css.css" /> 
+<body>
+<h1> Page d'essai à l'html </h1>
+
+<!-- Ceci est un commentaire : il n'est pas nécessaire de laisser des lignes entre chaque partie dans le code, de même des espaces entre les balises et le texte,
+	ou encore certaines tabulations et retour à la ligne, le navigateur dne fera pas la différence, ils sont ici présents pour plus de visibilité
+	Il est cependant possible d'utiliser certaines balises afin de manipuler la présentation du texte (on peut aussi le faire à l'aide d'un fichier CSS) -->
+<p> Cette page de code consiste en un essai du codage en html. </p>
+<p class="test">
+Test de changement de couleur grâce au CSS. Si le test fonctionne, ce paragraphe doit s'afficher en rouge.
+</p>
+<p> Pour aller directement à la fin de la page, cliquez sur le lien suivant : <br/>
+	<a href="#ancre"> Fin de la page </a> </p>
+
+<h2> Essai de liste </h2>
+
+<p> Voici un exemple de liste non ordonnée des éléments qui sont utilisés sur cette page : </p>
+<ul type="square">
+	<li> Les listes </li>
+	<li> Les titres </li>
+	<li> Les liens </li>
+	<li> Les images </li>
+	<li> Les zones réactives (i.e. zone-lien sur une images) </li>
+	<li> Les tableaux </li>
+	<li> Les formulaires </li>
+	<li> Les boutons </li>
+	<li> Pas les frame parce que c'est compliqué et que je compte y réserver un fichier à part </li>
+</ul>
+
+<h2> Essai de Tableau </h2>
+
+<p> Voici un exemple de tableau simple des éléments qui sont utilisés sur cette page avec les balises principales et les balises "secondaires" (bien qu'indispensables),
+	ainsi que les différents arguments associés : </p>
+<table border="2">
+	<caption align="top"> Essai de tableau </caption>
+	<tr>
+		<th> type d'élément </th>
+		<th> balise(s) principale(s) </th>
+		<th> balise(s) secondaire(s) </th>
+		<th> argument(s) </th>
+	</tr>
+	<tr>
+		<td> Les listes </td>
+		<td> ul, ol, dl, dir, menu </td>
+		<td> li </td>
+		<td> type, start </td>
+	</tr>
+	<tr>
+		<td> Les titres </td>
+		<td> hn (n indice d'importance du titre) </td>
+		<td> N/A </td>
+		<td> N/A </td>
+	</tr>
+	<tr>
+		<td> Les liens </td>
+		<td> a </td>
+		<td> N/A </td>
+		<td> href, id, src, target </td>
+	</tr>
+	<tr>
+		<td> Les images </td>
+		<td> img </td>
+		<td> N/A </td>
+		<td> src, alt, usemap </td>
+	</tr>
+	<tr>
+		<td> Les zones réactives </td>
+		<td> map </td>
+		<td> area </td>
+		<td> shape, coords, href </td>
+	</tr>
+	<tr>
+		<td> Les tableaux </td>
+		<td> table </td>
+		<td> td, th, caption, thead, tfoot, tbody </td>
+		<td> border, cellpadding, cellspacing, summary, align, colspan, rowspan </td>
+	</tr>
+	<tr>
+		<td> Les formulaires </td>
+		<td> form </td>
+		<td> input, text area </td>
+		<td> type, name, value, cols, rows, size, readonly, maxlength, disable </td>
+	</tr>
+	<tr>
+		<td> Les boutons </td>
+		<td> input, button, select </td>
+		<td> option </td>
+		<td> type, name, value, onclick, src, selected, size, multiple </td>
+	</tr>
+</table>
+
+<h2> Essai de formulaire et de bouton </h2>
+
+<p> Il est important de noter que les boutons font parties intégrantes des formulaires,
+	ils remplissent deux catégories dans le tableau afin de ne pas surcharger certaines cases. </p>
+
+<p> pseudo : <input type="text" name="login" value="pseudo" size ="20">
+mot de passe : <input type="password" name="mdp" size="20"> </p>
+<form>
+	<p> commentaire et avis général sur le site : <br/>
+	<textarea name="commentaire" rows="10" cols="50">Ecrivez ici vos éventuels commentaires sur cette page d'essai, de toute façon ils ne seront jamais récupérés</textarea>
+	<select name="avis" size="10">
+		<option value="horrible"> Horrible </option>
+		<option value="mediocre"> Médiocre </option>
+		<option value="insatisfaisant"> Insatisfaisant </option>
+		<option value="peu_satisfaisant"> Peu satisfaisant </option>
+		<option value="peu_mieux_faire"> Peu mieux faire </option>
+		<option value="ouais_bof"> Ouais bof ... </option>
+		<option value="satisfaisant"> Satisfaisant </option>
+		<option value="bon"> Bon </option>
+		<option value="trop_bien"> Trop bien </option>
+		<option value="awesome"> AWESOME !!! </option>
+	</select></p>
+	<button type="reset" name="commentaire"> Réinitialiser </button>
+	<button type="submit" name="comentaire"> Envoyer </button>
+</form>
+
+<h2 id="ancre"> Fin de la page </h2>
+<p class="remarque"> Remarque : pour lire le code de la page, il suffit de modifier l'extension du fichier en la faisant passer de .html à .txt puis d'ouvrir le fichier avec un logiciel tel que bloc-notes ou encore directement utiliser notepad++ (pas besoin de passer le fichier en .txt normalement)</p>
+<!-- Remarque : dans cette page, aucun en-tête n'est défini, il faudra penser à créer un en-tête et à le renseigner dans le cas ou vous voudrez concevoir un site qui sera envoyé sur l'internet -->
+</body>
