@@ -7,6 +7,10 @@
 #docker build ../DockerFiles/FTP_n7 -t image_ftp
 #docker build ../DockerFiles/quagga_n7 -t image_routeur
 
+docker build ./dockerfiles/R1 -t image_routeur_R1
+docker build ./dockerfiles/R2 -t image_routeur_R2
+docker build ./dockerfiles/R3 -t image_routeur_R3
+
 # Reseau externe entreprise
 docker network create --driver=bridge reseau_ext
 
@@ -20,11 +24,11 @@ docker network create --driver=bridge lien_r1
 docker network create --driver=bridge lien_r2
 
 # Connexion des routeurs
-docker run -t -d --name R1 --cap-add=NET_ADMIN --network lien_r1 image_routeur
+docker run -t -d --name R1 --cap-add=NET_ADMIN --network lien_r1 image_routeur_R1
 docker network connect lien_r2 R1 
 
-docker run -t -d --name R2 --cap-add=NET_ADMIN --network lien_r1 image_routeur
-docker run -t -d --name R3 --cap-add=NET_ADMIN --network lien_r2 image_routeur
+docker run -t -d --name R2 --cap-add=NET_ADMIN --network lien_r1 image_routeur_R2
+docker run -t -d --name R3 --cap-add=NET_ADMIN --network lien_r2 image_routeur_R3
 
 # Serveur web
 docker run --name serveur_web --network reseau_int -p 8080:80 image_web
