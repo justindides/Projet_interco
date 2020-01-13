@@ -25,4 +25,4 @@ ip addr add 192.168.1.1/24 dev eth1
 service isc-dhcp-server start
 
 #echo 1 > /proc/sys/net/ipv4/ip_forward
-
+iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
