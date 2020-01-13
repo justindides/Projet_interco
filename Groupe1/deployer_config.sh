@@ -52,7 +52,7 @@ docker exec R1AS /home/start.sh
 docker exec R2 /home/start.sh
 docker exec R2EX /home/start.sh
 docker exec R2EN /home/start.sh
-docker exec SDH /home/start.sh
+docker exec SDHCP /home/start.sh
 docker exec MACHINE1 /home/start.sh
 docker exec MACHINE2 /home/start.sh
 
