@@ -9,7 +9,9 @@ RUN apt-get update && apt-get install -y \
     quagga \
     isc-dhcp-server
 
-COPY  ./quagga /etc/quagga
+COPY start.sh /home/
+RUN ["chmod", "+x", "/home/start.sh"]
+
 EXPOSE  8000
 CMD ["python3", "-m", "http.server"]
 ENTRYPOINT  /bin/bash

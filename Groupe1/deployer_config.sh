@@ -58,7 +58,6 @@ docker network connect r_fai BOX1
 docker run -itd --name BOX2 --cap-add=NET_ADMIN image_box2
 docker network connect r_fai BOX2
 
-
 # SDHCP : Routeur/switch (= box) serveur DHCP, net et par feu à voir. Pour le 
 # réseau privé de l'entreprise.
 docker run -itd --name SDHCP --cap-add=NET_ADMIN --network r_dhcp_routeur image_serv_dhcp
@@ -83,3 +82,4 @@ docker exec R2EN /home/start.sh
 docker exec SDHCP /home/start.sh
 docker exec MACHINE1 /home/start.sh
 docker exec MACHINE2 /home/start.sh
+docker exec WEB /home/start.sh
