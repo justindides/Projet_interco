@@ -13,5 +13,3 @@ COPY  ./quagga /etc/quagga // On copie dans notre docker le dossier quagga qui c
 RUN mkdir /etc/scripts  // On créer un dossier qui servira pour les scripts
 ENV PATH "/etc/scripts:$PATH" 
 ENTRYPOINT /etc/init.d/quagga start && /bin/bash // Lancement de quagga. 
-
-PS : Justin est vraiment bg
