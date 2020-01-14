@@ -70,7 +70,7 @@ docker run -itd --name MACHINE2 --cap-add=NET_ADMIN --network r_prive image_mach
 docker network connect r_prive SDHCP
 
 # Serveur web du réseau externe d'entreprise
-docker run -itd --name WEB --cap-add=NET_ADMIN -p 8080:80 image_web
+docker run -itd --name WEB --cap-add=NET_ADMIN image_web
 docker network connect r_ext WEB
 
 #Execution de nos scripts pour lancer les applications sur chaque docker.
