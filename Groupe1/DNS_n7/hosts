@@ -1,6 +1,6 @@
 # /etc/hosts
 
-127.0.0.1	localhost filsde.pute
+127.0.0.1	localhost localhost
 127.0.1.1	quentin-HP-Notebook
 172.22.227.250	quentin-HP-Notebook.projet.reseau
 
