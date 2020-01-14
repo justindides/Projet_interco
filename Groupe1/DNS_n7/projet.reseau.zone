@@ -1,3 +1,5 @@
+; /var/bind/projet.reseau.zone
+
 $TTL 86400
 
 @ IN SOA projet.reseau. root.projet.reseau. (
