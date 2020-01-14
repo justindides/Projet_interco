@@ -83,3 +83,5 @@ docker exec SDHCP /home/start.sh
 docker exec MACHINE1 /home/start.sh
 docker exec MACHINE2 /home/start.sh
 docker exec WEB /home/start.sh
+docker exec BOX1 /home/start.sh
+docker exec BOX2 /home/start.sh
